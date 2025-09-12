@@ -1,14 +1,24 @@
-# Dependencies
-/node_modules
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Playwright reports and artifacts
-/test-results/
-/playwright-report/
-/playwright/.cache/
+# Playwright outputs
+playwright-report/
+test-results/
+.playwright/
 
-# Operating System files
+# Editors/OS
 .DS_Store
-Thumbs.db
+.idea/
+.vscode/
 
-# Environment variables
+# Builds/coverage
+dist/
+coverage/
+
+# Env files
 .env
+.env.*
