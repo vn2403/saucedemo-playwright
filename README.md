@@ -9,6 +9,11 @@ This project contains an automated test suite for the Sauce Labs demo website (h
 - [Project Structure](#project-structure)
 - [Answers to Questions](#answers-to-questions)
 
+Just a couple of things to get started:
+
+- Node.js: Make sure you have Node.js on your machine. The LTS version is always a safe bet.
+- A code editor: I'd recommend VS Code, it has a great Playwright extension that makes life easier.
+
 ## Installation
 
 1.  **Clone the repository:**
