@@ -39,27 +39,42 @@ You can run the full suite of tests using the following commands:
 - **Run all tests in headless mode:**
 
   ```bash
-  npm test
-  ```
-
-  or
-
-  ```bash
   npx playwright test
   ```
 
 - **Run all tests in headed mode (to watch the browser):**
 
   ```bash
-  npm run test:headed
+  npx playwright test --headed
   ```
 
 - **View the HTML report:**
   After a test run is complete, an HTML report is generated in the `playwright-report` directory. You can view it with:
   ```bash
-  npm run report
+   npx playwright show-report
   ```
+e.g. Passed ->
+ <img width="2636" height="1896" alt="image" src="https://github.com/user-attachments/assets/fa76255c-227f-42ec-8084-7cc505039246" />
 
+e.g. Failed ->
+ <img width="739" height="656" alt="Screenshot 2025-09-12 at 21 48 18" src="https://github.com/user-attachments/assets/a18238c1-7206-41c4-83b4-0bd782fd697d" />
+
+  
+#### **Screenshots for Fails 📸**
+
+I've set it up so that any time a test fails, Playwright automatically snaps a screenshot. You'll find these in the `test-results` folder, and they're also linked right inside the HTML report.
+
+#### **The Super-Handy Trace Viewer 🐛**
+
+This is Playwright's secret weapon for debugging! If a test fails, it creates a "trace" file. This file lets you go back in time and see *exactly* what the browser was doing at each step, including DOM snapshots, network requests, and console messages.
+
+You'll find a link to the trace file in the HTML report for any failed test. Just click on it, and it's like a time machine for your test run!
+
+## **A Few Quick Notes 📝**
+
+*   **No Chained Tests:** Each test is self-contained. It logs in, does its thing, and cleans up. This way, a failure in one test won't cause a bunch of others to fail.
+*   **Clean Setup for Each Test:** I'm using a `beforeEach` hook in the test files to handle things like logging in. This keeps our tests clean and avoids repeating code.
+*   **Code Organization:** You'll find all the locators and page-specific actions in the `/pages` folder. The actual test steps and assertions live in the `/tests` folder.
 ## Project Structure
 
 The project is organized using the Page Object Model (POM) to ensure the code is scalable and maintainable.
