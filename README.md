@@ -1,4 +1,4 @@
-# Murmuration - Senior QA Engineer Hiring Exercise
+#Senior QA Engineer Hiring Exercise
 
 This project contains an automated test suite for the Sauce Labs demo website (https://www.saucedemo.com/) as part of the hiring assessment. The tests are built using Playwright with TypeScript and follow the Page Object Model (POM) design pattern.
 
